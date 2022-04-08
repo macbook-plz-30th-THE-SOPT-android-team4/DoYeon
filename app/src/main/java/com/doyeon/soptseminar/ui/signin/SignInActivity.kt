@@ -1,12 +1,17 @@
 package com.doyeon.soptseminar.ui.signin
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.doyeon.soptseminar.R
+import com.doyeon.soptseminar.databinding.ActivitySignInBinding
+import com.doyeon.soptseminar.util.BaseViewUtil
 
-class SignInActivity : AppCompatActivity() {
+class SignInActivity :
+    BaseViewUtil.BaseAppCompatActivity<ActivitySignInBinding>(R.layout.activity_sign_in) {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_sign_in)
+        initView()
     }
+
+    override fun initView() {}
 }
