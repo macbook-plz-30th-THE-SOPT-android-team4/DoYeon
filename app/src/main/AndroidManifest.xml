@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SoptSeminar">
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.signin.SignInActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
