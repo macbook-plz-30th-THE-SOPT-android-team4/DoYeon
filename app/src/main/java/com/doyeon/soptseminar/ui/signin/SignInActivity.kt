@@ -4,6 +4,7 @@ import android.os.Bundle
 import com.doyeon.soptseminar.R
 import com.doyeon.soptseminar.databinding.ActivitySignInBinding
 import com.doyeon.soptseminar.util.BaseViewUtil
+import com.doyeon.soptseminar.util.showShortToast
 
 class SignInActivity :
     BaseViewUtil.BaseAppCompatActivity<ActivitySignInBinding>(R.layout.activity_sign_in) {
@@ -13,5 +14,22 @@ class SignInActivity :
         initView()
     }
 
-    override fun initView() {}
+    override fun initView() {
+        setClickListener()
+    }
+
+    private fun setClickListener() {
+        binding.abSignInLogin.setOnClickListener {
+            if (isIdAndPwFieldFilled()) {
+                showShortToast(resources.getString(R.string.login_success_toast))
+            } else {
+                showShortToast(resources.getString(R.string.login_fail_toast))
+            }
+        }
+    }
+
+    private fun isIdAndPwFieldFilled(): Boolean {
+        return binding.etSignInId.text.toString().isNotEmpty()
+                && binding.etSignInPw.text.toString().isNotEmpty()
+    }
 }
