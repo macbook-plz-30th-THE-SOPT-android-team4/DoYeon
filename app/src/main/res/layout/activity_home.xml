@@ -26,7 +26,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
-            android:text="이름 : 임도연\n나이 : 27\nMBTI : ISFJ"
+            android:text="이름 : 임도연\n나이 : 23\nMBTI : ISFJ"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
