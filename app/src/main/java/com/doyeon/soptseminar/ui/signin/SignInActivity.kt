@@ -3,7 +3,9 @@ package com.doyeon.soptseminar.ui.signin
 import android.os.Bundle
 import com.doyeon.soptseminar.R
 import com.doyeon.soptseminar.databinding.ActivitySignInBinding
+import com.doyeon.soptseminar.ui.signup.SignUpActivity
 import com.doyeon.soptseminar.util.BaseViewUtil
+import com.doyeon.soptseminar.util.moveToActivity
 import com.doyeon.soptseminar.util.showShortToast
 
 class SignInActivity :
@@ -25,6 +27,9 @@ class SignInActivity :
             } else {
                 showShortToast(resources.getString(R.string.login_fail_toast))
             }
+        }
+        binding.abSignInSignup.setOnClickListener {
+            moveToActivity(SignUpActivity::class.java)
         }
     }
 
