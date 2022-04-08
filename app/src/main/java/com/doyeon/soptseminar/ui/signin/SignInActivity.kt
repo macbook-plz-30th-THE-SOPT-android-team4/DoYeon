@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import com.doyeon.soptseminar.R
 import com.doyeon.soptseminar.databinding.ActivitySignInBinding
+import com.doyeon.soptseminar.ui.home.HomeActivity
 import com.doyeon.soptseminar.ui.signup.SignUpActivity
 import com.doyeon.soptseminar.util.BaseViewUtil
 import com.doyeon.soptseminar.util.showShortToast
@@ -24,6 +25,7 @@ class SignInActivity :
         binding.abSignInLogin.setOnClickListener {
             if (isIdAndPwFieldFilled()) {
                 showShortToast(resources.getString(R.string.login_success_toast))
+                startActivity(Intent(this, HomeActivity::class.java))
             } else {
                 showShortToast(resources.getString(R.string.login_fail_toast))
             }
