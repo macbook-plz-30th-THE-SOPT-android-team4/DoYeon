@@ -1,11 +1,11 @@
 package com.doyeon.soptseminar.ui.signin
 
+import android.content.Intent
 import android.os.Bundle
 import com.doyeon.soptseminar.R
 import com.doyeon.soptseminar.databinding.ActivitySignInBinding
 import com.doyeon.soptseminar.ui.signup.SignUpActivity
 import com.doyeon.soptseminar.util.BaseViewUtil
-import com.doyeon.soptseminar.util.moveToActivity
 import com.doyeon.soptseminar.util.showShortToast
 
 class SignInActivity :
@@ -29,7 +29,7 @@ class SignInActivity :
             }
         }
         binding.abSignInSignup.setOnClickListener {
-            moveToActivity(SignUpActivity::class.java)
+            startActivity(Intent(this, SignUpActivity::class.java))
         }
     }
 
