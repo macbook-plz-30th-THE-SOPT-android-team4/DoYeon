@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/spacing_10"
+        android:background="@drawable/bg_rectangle_stroke_1_round_5"
+        android:paddingHorizontal="@dimen/spacing_10"
+        android:paddingVertical="@dimen/spacing_10">
+
+        <ImageView
+            android:id="@+id/iv_follower"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/bg_home_my"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_follower_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_10"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toEndOf="@id/iv_follower"
+            app:layout_constraintTop_toTopOf="@id/iv_follower"
+            tools:text="임도연" />
+
+        <TextView
+            android:id="@+id/tv_follower_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@id/iv_follower"
+            app:layout_constraintStart_toStartOf="@id/tv_follower_name"
+            app:layout_constraintTop_toBottomOf="@id/tv_follower_name"
+            tools:text="안드로이드" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
