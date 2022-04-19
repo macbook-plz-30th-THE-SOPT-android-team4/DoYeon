@@ -17,3 +17,22 @@
 
 - 자기소개 화면 (HomeActivity)
   - ImageView, TextView 사용
+
+## Seminar week2
+
+|전체 시연영상|팔로워 목록|레포지토리 목록|
+|:---:|:---:|:---:|
+|<img src="https://user-images.githubusercontent.com/64943924/164006150-71830e7a-28a9-46bf-be8d-f0b2b7c23c2d.gif" width=300/>|<img src="https://user-images.githubusercontent.com/64943924/164005918-e1fb5867-8e8d-43a5-9434-eb1ed0c73253.png" width=300/>|<img src="https://user-images.githubusercontent.com/64943924/164005979-92c07917-f3fb-40ac-a8bc-91694af1a3ab.png" width=300/>|
+
+
+### 구현한 사항
+- Fragment Transaction
+  - supportFragmentManager의 replace method 사용하여 선택한 버튼에 해당하는 fragment로 replace
+  - default : FollowerFragment
+- 팔로워 목록 (FollowerFragment)
+  - LinearLayoutManager
+  - ListAdapter 사용하여 데이터 추가, 삭제시 백그라운드에서 비교하여 처리할 수 있도록 구현
+
+- 레포지토리 목록 (RepositoryFragment)
+  - GridLayoutManager, span 2
+  - ListAdapter 사용하여 데이터 추가, 삭제시 백그라운드에서 비교하여 처리할 수 있도록 구현
