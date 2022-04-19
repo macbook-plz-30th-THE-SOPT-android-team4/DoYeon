@@ -27,6 +27,9 @@ class HomeActivity :
         binding.acbHomeFollower.setOnClickListener {
             setListFragment(FollowerFragment())
         }
+        binding.acbHomeRepository.setOnClickListener {
+            setListFragment(RepositoryFragment())
+        }
     }
 
     private fun setListFragment(fragment: Fragment) {
