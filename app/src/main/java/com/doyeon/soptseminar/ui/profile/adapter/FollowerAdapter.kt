@@ -1,4 +1,4 @@
-package com.doyeon.soptseminar.ui.home.adapter
+package com.doyeon.soptseminar.ui.profile.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

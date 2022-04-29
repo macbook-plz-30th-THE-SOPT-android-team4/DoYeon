@@ -1,4 +1,4 @@
-package com.doyeon.soptseminar.ui.home.adapter
+package com.doyeon.soptseminar.ui.profile.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -8,7 +8,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.doyeon.soptseminar.databinding.ItemRepositoryBinding
 import com.doyeon.soptseminar.model.RepositoryData
 
-class RepositoryAdapter : ListAdapter<RepositoryData, RepositoryAdapter.RepositoryViewHolder>(diffUtil) {
+class RepositoryAdapter : ListAdapter<RepositoryData, RepositoryAdapter.RepositoryViewHolder>(
+    diffUtil
+) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RepositoryViewHolder {
         return RepositoryViewHolder(

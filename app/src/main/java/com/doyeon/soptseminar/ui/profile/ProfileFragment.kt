@@ -9,8 +9,8 @@ import com.doyeon.soptseminar.R
 import com.doyeon.soptseminar.databinding.FragmentProfileBinding
 import com.doyeon.soptseminar.model.FollowerData
 import com.doyeon.soptseminar.model.RepositoryData
-import com.doyeon.soptseminar.ui.home.adapter.FollowerAdapter
-import com.doyeon.soptseminar.ui.home.adapter.RepositoryAdapter
+import com.doyeon.soptseminar.ui.profile.adapter.FollowerAdapter
+import com.doyeon.soptseminar.ui.profile.adapter.RepositoryAdapter
 import com.doyeon.soptseminar.util.BaseViewUtil
 
 class ProfileFragment :
