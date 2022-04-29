@@ -12,61 +12,22 @@
         android:layout_height="match_parent"
         tools:context=".ui.home.HomeActivity">
 
-        <ImageView
-            android:id="@+id/iv_home_my_profile"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_marginTop="@dimen/spacing_20"
-            android:src="@drawable/bg_home_my"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/tv_home_my_profile"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/spacing_20"
-            android:text="이름 : 임도연\n나이 : 23\nMBTI : ISFJ"
-            android:textColor="@color/black"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/iv_home_my_profile" />
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/acb_home_follower"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/spacing_20"
-            android:backgroundTint="#AD80FF"
-            android:text="팔로워\n목록"
-            android:textColor="@color/white"
-            app:layout_constraintEnd_toStartOf="@id/acb_home_repository"
-            app:layout_constraintHorizontal_chainStyle="packed"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_home_my_profile" />
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/acb_home_repository"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/spacing_30"
-            android:backgroundTint="#231F2C"
-            android:text="레포지토리\n목록"
-            android:textColor="@color/white"
-            app:layout_constraintBottom_toBottomOf="@id/acb_home_follower"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_chainStyle="packed"
-            app:layout_constraintStart_toEndOf="@id/acb_home_follower"
-            app:layout_constraintTop_toTopOf="@id/acb_home_follower" />
-
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/fcv_home"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_marginTop="@dimen/spacing_20"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/acb_home_follower" />
+            app:layout_constraintBottom_toTopOf="@id/bnv_home"
+            app:layout_constraintTop_toTopOf="parent" />
 
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bnv_home"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:labelVisibilityMode="labeled"
+            app:itemTextColor="@color/selector_menu"
+            app:itemIconTint="@color/selector_menu"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:menu="@menu/menu_bottom_nav" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
