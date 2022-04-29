@@ -29,6 +29,7 @@
 - Fragment Transaction
   - supportFragmentManager의 replace method 사용하여 선택한 버튼에 해당하는 fragment로 replace
   - default : FollowerFragment
+
 - 팔로워 목록 (FollowerFragment)
   - LinearLayoutManager
   - ListAdapter 사용하여 데이터 추가, 삭제시 백그라운드에서 비교하여 처리할 수 있도록 구현
@@ -36,3 +37,25 @@
 - 레포지토리 목록 (RepositoryFragment)
   - GridLayoutManager, span 2
   - ListAdapter 사용하여 데이터 추가, 삭제시 백그라운드에서 비교하여 처리할 수 있도록 구현
+
+## Seminar week3
+
+|전체 시연영상|프로필 화면|홈 화면|
+|:---:|:---:|:---:|
+|<img src="https://user-images.githubusercontent.com/64943924/165987136-df49e06f-00b3-4353-a0ab-86dfd0028ccf.gif" width=300/>|<img src="https://user-images.githubusercontent.com/64943924/165986998-9ba79c14-c9ab-4e59-9799-348efab8779a.png" width=300/>|<img src="https://user-images.githubusercontent.com/64943924/165986972-81ae9ea5-38be-4d0f-90be-38ca2cc5d430.png" width=300/>|
+
+### 구현한 사항
+- noto sans 폰트 적용
+  - font family를 지정하고 필요한 뷰에서 해당 font family를 호출하는 방식으로 구현
+
+- Bottom Navigation (HomeActivity)
+  - BottomNavigationView와 FragmentContainerView를 연결하여 바텀 메뉴 변경에 따른 Fragment 호출을 구현
+
+- 프로필 화면 (ProfileFragment)
+  - Glide를 사용해 profile image circleCrop으로 지정
+  - 팔로워 / 레포지토리 목록을 Radio Group으로 묶고, 스타일은 selector checked 여부에 따라 지정
+  - 2차 과제에서 버튼 클릭에 따라 fragment를 바꿔주었던 로직을 recyclerview의 adapter를 바꿔주는 로직으로 수정
+
+- 홈 화면 (HomeFragment)
+  - 팔로잉/팔로워 Tablayout과 ViewPager를 연결
+  - Tablayout의 색상은 속성으로, 폰트와 텍스트 크기는 style로 지정
