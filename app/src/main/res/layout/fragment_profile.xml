@@ -96,9 +96,8 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/selector_profile_btn_bg"
                 android:button="@null"
-                android:checked="true"
-                android:fontFamily="@font/noto_sans_kr_medium"
-                android:paddingHorizontal="45dp"
+                tools:checked="true"
+                android:fontFamily="@font/noto_sans_kr_medium"                android:paddingHorizontal="45dp"
                 android:text="팔로워 목록"
                 android:textColor="@color/selector_profile_btn_text" />
 
@@ -121,6 +120,7 @@
             android:layout_height="0dp"
             android:layout_marginTop="8dp"
             android:overScrollMode="never"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toBottomOf="@id/rg_profile"
             tools:listitem="@layout/item_follower" />
